@@ -11,24 +11,20 @@ import Alamofire
 
 class NetworkManager {
     
-    private var completionHander: ((Codable?, Error? )-> Void)
+    private var completionHander: ((Data?, Error? )-> Void)
     
     
-    init(completion: @escaping ((Codable?, Error?) -> Void)) {
+    init(completion: @escaping ((Data?, Error?) -> Void)) {
         self.completionHander = completion
     }
     
     
-    func makeDataRequest<T: Codable>( _ request: DataRequest, type: T.Type) {
+    func makeDataRequest( _ request: DataRequest) {
         request.responseData { (response) in
             switch response.result {
             case .success(let data):
-                do {
-                    let response = try JSONDecoder().decode(type, from: data)
-                    self.completionHander(response, nil)
-                } catch {
-                    self.completionHander(nil, error)
-                }
+                self.completionHander(data, nil)
+                break
             case .failure(let error):
                 self.completionHander(nil, error)
                 break
@@ -38,6 +34,6 @@ class NetworkManager {
     
     
     func getTimeLines() {
-        makeDataRequest(Alamofire.request("https://nodeswiftcairo.herokuapp.com/api/timelines"), type: TimeLines.self)
+        makeDataRequest(Alamofire.request("https://nodeswiftcairo.herokuapp.com/api/timelines"))
     }
 }

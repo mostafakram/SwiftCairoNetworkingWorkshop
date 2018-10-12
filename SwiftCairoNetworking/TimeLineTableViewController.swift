@@ -61,16 +61,34 @@ class TimeLineTableViewController: UITableViewController {
                 self.state = .error(error: error.localizedDescription)
             }
             
-            if let timelines = data as? TimeLines {
-                // back to main thread to update UI
-                if timelines.count > 0 {
-                    self.timelines = timelines
-                    self.state = .populated
-                } else {
-                        self.timelines = []
-                self.state = .empty
+            DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
+                // time-consuming task
+                if let jsonData = data {
+                    do {
+                        let response = try JSONDecoder().decode(TimeLines.self, from: jsonData)
+                        DispatchQueue.main.async(execute: {
+                            // back to main thread to update UI
+                            if response.count > 0 {
+                                self.timelines = response
+                                self.state = .populated
+                            } else {
+                                self.timelines = []
+                                self.state = .empty
+                            }
+                        })
+                    } catch {
+                        DispatchQueue.main.async(execute: {
+                            // back to main thread to update UI
+                          self.state = .error(error: error.localizedDescription)
+                        })
+                    }
                 }
+                DispatchQueue.main.async(execute: {
+                    // back to main thread to update UI
+        
+                })
             }
+            
         }).getTimeLines()
     }
 
