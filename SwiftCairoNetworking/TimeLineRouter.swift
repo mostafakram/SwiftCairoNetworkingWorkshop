@@ -9,11 +9,11 @@
 import Foundation
 import Alamofire
 
-enum TimeLineRouter: URLRequestConvertible {
+enum TimeLineRouter: URLRequestBuilder {
     
     case all
 
-    var params: Parameters? {
+    var paramaters: Parameters? {
         switch self {
         case .all:
             return nil
@@ -33,45 +33,5 @@ enum TimeLineRouter: URLRequestConvertible {
             return .get
         }
     }
-    
-    
-    var headers: HTTPHeaders? {
-        switch self {
-        default:
-            return nil
-        }
-    }
-    
-    
-    var baseURL: String {
-      return "https://nodeswiftcairo.herokuapp.com/api/"
-    }
-    
-    var url: URL {
-        var url = URL(string: baseURL)!
-        url.appendPathComponent(path)
-        return url
-    }
-    
-    
-    var urlRequest: URLRequest {
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = method.rawValue
-        urlRequest.allHTTPHeaderFields = headers
-        return urlRequest
-    }
-    
-    
-    var encoding: ParameterEncoding {
-        switch method {
-        case .get:
-            return URLEncoding.default
-        default:
-            return JSONEncoding.default
-        }
-    }
-    
-    func asURLRequest() throws -> URLRequest {
-        return try encoding.encode(urlRequest, with: params)
-    }
+
 }

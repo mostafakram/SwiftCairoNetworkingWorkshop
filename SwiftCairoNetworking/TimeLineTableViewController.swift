@@ -39,7 +39,7 @@ class TimeLineTableViewController: UITableViewController {
         case .populated:
             tableView.backgroundView = nil
         case .empty:
-            tableView.addNoDataAvailable(with: "Sorry can't find merchants")
+            tableView.addNoDataAvailable(with: "Sorry can't find timelines")
         case .error(let message):
             tableView.addNoDataAvailable(with: message)
         }
@@ -55,23 +55,21 @@ class TimeLineTableViewController: UITableViewController {
     
     
     func loadTimeLines() {
-        state = .loading
-        NetworkManager(completion: { (data, error) in
-            if let error = error {
+        self.state = .loading
+        TimeLineRouter.all.send([TimeLine].self) { (response) in
+            switch response {
+            case .failure(let error):
                 self.state = .error(error: error.localizedDescription)
-            }
-            
-            if let timelines = data as? TimeLines {
-                // back to main thread to update UI
+            case .success(let timelines):
                 if timelines.count > 0 {
                     self.timelines = timelines
                     self.state = .populated
                 } else {
-                        self.timelines = []
-                self.state = .empty
+                    self.timelines = []
+                    self.state = .empty
                 }
             }
-        }).getTimeLines()
+        }
     }
 
 

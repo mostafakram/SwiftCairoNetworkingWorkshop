@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		28875D172171DC810030C53B /* HandleAlamofireResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28875D162171DC810030C53B /* HandleAlamofireResponse.swift */; };
 		28875D192171DCBD0030C53B /* TimeLineRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28875D182171DCBD0030C53B /* TimeLineRouter.swift */; };
+		28875D1B2171DFA40030C53B /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28875D1A2171DFA40030C53B /* URLRequestBuilder.swift */; };
+		28875D1D2171E6630030C53B /* APIRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28875D1C2171E6630030C53B /* APIRequestHandler.swift */; };
+		28875D1F2171E6D80030C53B /* CodableInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28875D1E2171E6D80030C53B /* CodableInit.swift */; };
+		28875D212171E71F0030C53B /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28875D202171E71F0030C53B /* ServerResponse.swift */; };
 		28C5B0B02170F48600C6D322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5B0AF2170F48600C6D322 /* AppDelegate.swift */; };
 		28C5B0B52170F48600C6D322 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C5B0B32170F48600C6D322 /* Main.storyboard */; };
 		28C5B0B72170F48800C6D322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C5B0B62170F48800C6D322 /* Assets.xcassets */; };
 		28C5B0BA2170F48800C6D322 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C5B0B82170F48800C6D322 /* LaunchScreen.storyboard */; };
-		28C5B0C22170F54600C6D322 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5B0C12170F54600C6D322 /* NetworkManager.swift */; };
 		28C5B0C42170F7A200C6D322 /* TimeLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5B0C32170F7A200C6D322 /* TimeLineTableViewController.swift */; };
 		28C5B0C62170F7FE00C6D322 /* TimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C5B0C52170F7FE00C6D322 /* TimeLine.swift */; };
 		785D1CBF18DF43D5886D50E4 /* Pods_SwiftCairoNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693B6B792DC5E427A9E764CC /* Pods_SwiftCairoNetworking.framework */; };
@@ -22,13 +25,16 @@
 /* Begin PBXFileReference section */
 		28875D162171DC810030C53B /* HandleAlamofireResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleAlamofireResponse.swift; sourceTree = "<group>"; };
 		28875D182171DCBD0030C53B /* TimeLineRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineRouter.swift; sourceTree = "<group>"; };
+		28875D1A2171DFA40030C53B /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		28875D1C2171E6630030C53B /* APIRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHandler.swift; sourceTree = "<group>"; };
+		28875D1E2171E6D80030C53B /* CodableInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableInit.swift; sourceTree = "<group>"; };
+		28875D202171E71F0030C53B /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		28C5B0AC2170F48600C6D322 /* SwiftCairoNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCairoNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C5B0AF2170F48600C6D322 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28C5B0B42170F48600C6D322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28C5B0B62170F48800C6D322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28C5B0B92170F48800C6D322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28C5B0BB2170F48800C6D322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28C5B0C12170F54600C6D322 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		28C5B0C32170F7A200C6D322 /* TimeLineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewController.swift; sourceTree = "<group>"; };
 		28C5B0C52170F7FE00C6D322 /* TimeLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLine.swift; sourceTree = "<group>"; };
 		33945B7FBAB93E80C7026E13 /* Pods-SwiftCairoNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCairoNetworking.debug.xcconfig"; path = "Target Support Files/Pods-SwiftCairoNetworking/Pods-SwiftCairoNetworking.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,16 +84,19 @@
 		28C5B0AE2170F48600C6D322 /* SwiftCairoNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				28875D1A2171DFA40030C53B /* URLRequestBuilder.swift */,
 				28C5B0AF2170F48600C6D322 /* AppDelegate.swift */,
 				28C5B0B32170F48600C6D322 /* Main.storyboard */,
 				28C5B0C52170F7FE00C6D322 /* TimeLine.swift */,
 				28C5B0B62170F48800C6D322 /* Assets.xcassets */,
 				28C5B0B82170F48800C6D322 /* LaunchScreen.storyboard */,
 				28C5B0BB2170F48800C6D322 /* Info.plist */,
-				28C5B0C12170F54600C6D322 /* NetworkManager.swift */,
 				28C5B0C32170F7A200C6D322 /* TimeLineTableViewController.swift */,
 				28875D162171DC810030C53B /* HandleAlamofireResponse.swift */,
 				28875D182171DCBD0030C53B /* TimeLineRouter.swift */,
+				28875D1C2171E6630030C53B /* APIRequestHandler.swift */,
+				28875D1E2171E6D80030C53B /* CodableInit.swift */,
+				28875D202171E71F0030C53B /* ServerResponse.swift */,
 			);
 			path = SwiftCairoNetworking;
 			sourceTree = "<group>";
@@ -212,12 +221,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28875D1B2171DFA40030C53B /* URLRequestBuilder.swift in Sources */,
 				28C5B0C62170F7FE00C6D322 /* TimeLine.swift in Sources */,
+				28875D1F2171E6D80030C53B /* CodableInit.swift in Sources */,
 				28875D192171DCBD0030C53B /* TimeLineRouter.swift in Sources */,
-				28C5B0C22170F54600C6D322 /* NetworkManager.swift in Sources */,
+				28875D1D2171E6630030C53B /* APIRequestHandler.swift in Sources */,
 				28C5B0B02170F48600C6D322 /* AppDelegate.swift in Sources */,
 				28875D172171DC810030C53B /* HandleAlamofireResponse.swift in Sources */,
 				28C5B0C42170F7A200C6D322 /* TimeLineTableViewController.swift in Sources */,
+				28875D212171E71F0030C53B /* ServerResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

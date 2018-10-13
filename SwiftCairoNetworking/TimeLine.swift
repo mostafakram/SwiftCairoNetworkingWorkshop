@@ -10,7 +10,6 @@ import Foundation
 
 typealias TimeLines = [TimeLine]
 
-
 struct TimeLine: Codable {
     let date, text, image: String
     let user: User
