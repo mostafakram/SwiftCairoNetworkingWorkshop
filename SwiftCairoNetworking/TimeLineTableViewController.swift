@@ -56,17 +56,17 @@ class TimeLineTableViewController: UITableViewController {
     
     func loadTimeLines() {
         self.state = .loading
-        TimeLineRouter.all.send([TimeLine].self) { (response) in
+        TimeLineRouter.all.send([TimeLine].self) { [weak self] (response) in
             switch response {
             case .failure(let error):
-                self.state = .error(error: error.localizedDescription)
+                self?.state = .error(error: error.localizedDescription)
             case .success(let timelines):
                 if timelines.count > 0 {
-                    self.timelines = timelines
-                    self.state = .populated
+                    self?.timelines = timelines
+                    self?.state = .populated
                 } else {
-                    self.timelines = []
-                    self.state = .empty
+                    self?.timelines = []
+                    self?.state = .empty
                 }
             }
         }
