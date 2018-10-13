@@ -18,7 +18,6 @@ protocol URLRequestBuilder: APIRequestHandler, URLRequestConvertible {
     var url: URL { get }
     var urlRequest: URLRequest { get }
     var encoding: ParameterEncoding { get }
-    var decoder: Codable.Type {get}
 }
 
 extension URLRequestBuilder {

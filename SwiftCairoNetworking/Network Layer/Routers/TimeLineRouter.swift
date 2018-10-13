@@ -34,11 +34,4 @@ enum TimeLineRouter: URLRequestBuilder {
         }
     }
     
-    var decoder: Codable.Type {
-        switch self {
-        case .all:
-            return TimeLines.self
-        }
-    }
-
 }

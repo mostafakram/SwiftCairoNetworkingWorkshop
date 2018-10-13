@@ -63,6 +63,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		28875D222171F1190030C53B /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				28875D232171F1260030C53B /* Routers */,
+				28875D1A2171DFA40030C53B /* URLRequestBuilder.swift */,
+				28875D162171DC810030C53B /* HandleAlamofireResponse.swift */,
+				28875D1C2171E6630030C53B /* APIRequestHandler.swift */,
+				28875D1E2171E6D80030C53B /* CodableInit.swift */,
+				28875D202171E71F0030C53B /* ServerResponse.swift */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		28875D232171F1260030C53B /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				28875D182171DCBD0030C53B /* TimeLineRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
 		28C5B0A32170F48600C6D322 = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +105,7 @@
 		28C5B0AE2170F48600C6D322 /* SwiftCairoNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				28875D1A2171DFA40030C53B /* URLRequestBuilder.swift */,
+				28875D222171F1190030C53B /* Network Layer */,
 				28C5B0AF2170F48600C6D322 /* AppDelegate.swift */,
 				28C5B0B32170F48600C6D322 /* Main.storyboard */,
 				28C5B0C52170F7FE00C6D322 /* TimeLine.swift */,
@@ -92,11 +113,6 @@
 				28C5B0B82170F48800C6D322 /* LaunchScreen.storyboard */,
 				28C5B0BB2170F48800C6D322 /* Info.plist */,
 				28C5B0C32170F7A200C6D322 /* TimeLineTableViewController.swift */,
-				28875D162171DC810030C53B /* HandleAlamofireResponse.swift */,
-				28875D182171DCBD0030C53B /* TimeLineRouter.swift */,
-				28875D1C2171E6630030C53B /* APIRequestHandler.swift */,
-				28875D1E2171E6D80030C53B /* CodableInit.swift */,
-				28875D202171E71F0030C53B /* ServerResponse.swift */,
 			);
 			path = SwiftCairoNetworking;
 			sourceTree = "<group>";
