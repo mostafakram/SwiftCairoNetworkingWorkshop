@@ -21,14 +21,7 @@ extension APIRequestHandler where Self: URLRequestConvertible {
     func send<T: Codable> (_ decoder: T.Type, completion: CallResponse<T> ) {
         request(self).validate().responseData { (response) in
             self.handleResponse(response, completion: completion)
-            }.responseJSON { (response) in
-                switch response.result{
-                case .success(let json):
-                    print(json as? [String:Any])
-                case .failure(let error):
-                    print(error)
-                }
-        }
+            }
     }
     
 }

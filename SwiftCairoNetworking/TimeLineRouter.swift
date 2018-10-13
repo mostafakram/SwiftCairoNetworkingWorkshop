@@ -33,5 +33,12 @@ enum TimeLineRouter: URLRequestBuilder {
             return .get
         }
     }
+    
+    var decoder: Codable.Type {
+        switch self {
+        case .all:
+            return TimeLines.self
+        }
+    }
 
 }
