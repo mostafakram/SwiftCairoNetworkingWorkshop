@@ -39,7 +39,7 @@ class TimeLineTableViewController: UITableViewController {
         case .populated:
             tableView.backgroundView = nil
         case .empty:
-            tableView.addNoDataAvailable(with: "Sorry can't find merchants")
+            tableView.addNoDataAvailable(with: "Sorry can't find timelines")
         case .error(let message):
             tableView.addNoDataAvailable(with: message)
         }
